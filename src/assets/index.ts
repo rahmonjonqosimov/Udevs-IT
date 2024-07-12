@@ -120,8 +120,8 @@ import Material_UI from './images/languages/Material-UI.svg';
 import Zeplin from './images/languages/Zeplin.svg';
 import Illustrator_language from './images/languages/Illustrator.svg';
 import Lottie from './images/languages/Lottie.svg';
-import Photoshop from './images/languages/Photoshop.svg';
 import Python from './images/languages/Python.svg';
+import Photoshop from './images/languages/photoshop.svg';
 
 
 export { Python, Node_JS, PHP, Photoshop, PostgreSQL, Principle, Promotheus, React_JS, Sass, Sketch, Swift, Terraform, Vue_JS , YouTrack, Zeplin, Figma, Flutter, GO, IOS, Illustrator_language, Invision, Java, Javascript, Jmeter, Kotlin, Kubernetes, Lottie, Material_UI, MongoDB, Next_JS, AWS, Azure, GCP, DigitalOcean, Adobe_suite, Android, Bitbucket, Gatsby_JS, Grafana, Loki, Gitlab, Ant_Design, Balsamic,  Cassandra, Appium, Cypress, Docker, ELK,   frontend, backend, DevOps, UX_UI, qa, consulting_img,  architecture, auto_testing, stress_testing, load_testing, devops, cloud, CI_CD, figma, lottie, Illustrator, sketch, atomic_design, phone, prototyping, ui, ux, web_design, erp_img, crm, learning, e_commerce, pos, email, warehouse, android, crossplatform, flutter, ios, klotin, mobile_app_img, swift, team_img, logo, team_service, consulting_service, design_service, erp_service, optimization_service, tel_service, hero_img, hero_logo, mobile_application, consulting, erp, design, optimization,delever, goodzone, iman,sms  };
