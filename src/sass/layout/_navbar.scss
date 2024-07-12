@@ -1,0 +1,141 @@
+.navbar-section{
+    padding: 10px 0;
+    box-shadow: 0 1px 0 #e5e9f2;
+    position: sticky;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    z-index: 100;
+    .navbar{
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav__logo{
+
+            width: 130px;
+            height: 32px;
+
+        }
+
+        .nav__items{
+            
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            max-width: 780px;
+            width: 100%;
+
+
+            .nav__item{      
+                a{
+                    display: block;
+                    padding: 10px 0;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    color: #18191f;
+                    border-radius: 2px;
+                    border-bottom: 2px solid transparent;
+                    transition: all .1s ease-in-out;
+                    text-decoration: none;
+                    &:hover{
+                        border-bottom: 2px solid #1b5bf7;
+                    }
+
+                }
+
+                &-contact{
+
+                    padding: 10px 30px;
+                    border-radius: 8px;    
+                    background: #1b5bf7;
+                    cursor: pointer;
+                    transition: all .2s linear;
+                    &:hover{
+                        transform: scale(1.04);
+                    }
+
+                    a{
+                        padding: 0;
+                        color: #fff;
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 700;
+                    }
+                }
+
+                &-service,
+                &-portfolio,
+                &-language{
+                    position: relative;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                    &:hover{
+                        .nav__service-wrapper{
+                            transform: translateX(-50%) scaleY(1);
+                        }
+                    }
+
+                    .nav__service-wrapper{
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%) scaleY(0);
+                        transform-origin: top;
+                        padding: 18px 0 ;
+                        background-color: #fff;
+                        box-shadow: 0 0 2px rgba(0, 0, 0, .04), 0 4px 4px rgba(0, 0, 0, .08);
+                        min-width: 300px;   
+                        border-radius: 8px; 
+                        transition: all 0.2s linear;
+                        .nav__service-title{
+                            padding: 0 24px;
+                            margin-bottom: 20px;
+                            font-size: 12px;
+                            line-height: 18px;
+                            font-weight: 700;
+                            letter-spacing: 1px;
+                            color: rgba(0, 0, 0, .4);
+                        }
+
+                        .nav__service-box{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            padding: 8px 11px 8px 34px;
+                            transition: all .1s ease-in-out;
+                            margin-bottom: 8px;
+                            gap: 10px;
+                            &:hover{
+                                background: #1b5bf7;
+                                p{
+                                    color: #fff;
+                                }
+                            }
+                            img{
+                                width: 48px ;
+                                height: 48px;
+                            }
+                            p{
+                                font-size: 13px;
+                                line-height: 19px;
+                                font-weight: 400;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+}

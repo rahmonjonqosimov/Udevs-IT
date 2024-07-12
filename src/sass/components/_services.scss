@@ -1,0 +1,45 @@
+.services-section{
+    padding: 100px 0;
+    .servivce__title{
+
+        max-width: 800px;
+        font-size: 64px;
+        line-height: 64px;
+        font-weight: 800;
+        color: #1b5bf7;
+        margin-bottom: 40px;
+
+    }
+
+    .service__wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        row-gap: 24px;
+
+        .service__card{
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+            background: #F4F7FF;
+            border-radius: 8px;
+            transition: all .2s linear;
+            &:hover{
+                box-shadow: 3px 3px 10px #0002;
+            }
+            img{
+                margin-bottom: 24px;
+            }
+            
+            p{
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 600;
+                color: #18191f;
+                margin-bottom: 20px;
+            }
+
+        }   
+    }
+
+}

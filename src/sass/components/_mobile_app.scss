@@ -1,0 +1,130 @@
+.mobile-app-section{
+    padding: 80px 0;
+    background-image: url('../../assets/images/imgs/bg.jfif');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    .mobile-app__title{
+        max-width: 800px;
+        font-size: 64px;
+        line-height: 64px;
+        font-weight: 800;
+        color: #1b5bf7;
+        margin-bottom: 42px;
+    }
+
+    .mobile__box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        .box__content{
+            max-width: 500px;
+            p{
+                font-size: 24px;
+                line-height: 40px;
+                font-weight: 500;
+                color: #18191f;
+                margin-bottom: 26px;
+            }
+
+            .icon__wrapper{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 15px;
+                row-gap: 8px;
+                margin: 40px 0;
+                .icon__card{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                    background-color: #f4f7ff;
+                    padding: 10px 20px 10px 10px;
+                    border-radius: 8px;
+                    img{
+                        width: 56px;
+                        height: 56px;
+                        margin-bottom: 12px;
+                    }
+                    span{
+                        font-size: 18px;
+                        line-height: 30px;
+                        font-weight: 600;
+                        color: #000;
+                    }
+                }
+
+            }
+
+            h4{
+                font-size: 32px;
+                line-height: 40px;
+                font-weight: 800;
+                color: #464359;
+                margin-bottom: 32px;
+            }
+
+            .technologies__wrapper{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 15px;
+                row-gap: 8px;
+                .technologies__card{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                    img{
+                        width: 56px;
+                        height: 56px;
+                        margin-bottom: 8px;
+                    }
+                    p{
+                        font-size: 20px;
+                        line-height: 30px;
+                        font-weight: 600;
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .box-img{
+            background-image: url("../../assets/images/imgs/mobile-card-bg.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 8px;
+            max-width: 500px;
+            padding: 40px 0;
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.erp-banner, 
+.optimization-banner {
+    background: #f4f7ff;
+    .mobile__box{
+        flex-direction: row-reverse;
+        .box__content{
+            .icon__wrapper{
+                .icon__card{
+                    background: #E0E8FF;
+                }
+            }
+        }
+    }
+}
+
+.consulting-banner{
+    .mobile__box{
+        .box-img{
+            background: transparent;
+        }
+    }
+}

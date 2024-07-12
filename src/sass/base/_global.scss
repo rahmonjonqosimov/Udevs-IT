@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container{
+    max-width: 1172px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+@font-face {
+    font-family: Manrope ;
+    src: url(../../fonts/Manrope-Regular.ttf)
+}
+
+body{
+    font-family: Manrope, sans-serif  !important; 
+}
+
+
+button{
+    transition: all .2s linear;
+    &:hover{
+        transform: scale(1.04);
+    }
+}
