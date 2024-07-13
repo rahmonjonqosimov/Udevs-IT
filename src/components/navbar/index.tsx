@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // images
 import { logo, mobile_application, consulting, design , erp, optimization,delever, goodzone, iman, sms } from '@/assets/index' 
@@ -18,7 +18,13 @@ const Navbar:React.FC = () => {
 
   const [open, setOpen] = useState<boolean>(false)
 
-  document.body.style.overflow  = open ? 'hidden' : 'auto'
+  useEffect(() => {
+
+   document.body.style.overflow  = open ? 'hidden' : 'auto'
+   
+  }, [open])
+
+
 
   return (
 
