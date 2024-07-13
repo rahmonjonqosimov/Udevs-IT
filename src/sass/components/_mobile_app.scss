@@ -128,3 +128,145 @@
         }
     }
 }
+
+
+
+@media screen and (max-width: 900px) {
+    .mobile-app-section{
+    padding: 50px 0;
+    .mobile-app__title{
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .mobile__box{
+        flex-direction: column-reverse;
+        .box__content{
+            max-width: 500px;
+            p{
+                font-size: 16px;
+                line-height: 30px;
+                margin-top: 16px;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .icon__wrapper{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 15px;
+                row-gap: 8px;
+                margin: 40px 0;
+                .icon__card{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                    background-color: #f4f7ff;
+                    padding: 10px 20px 10px 10px;
+                    border-radius: 8px;
+                    img{
+                        width: 56px;
+                        height: 56px;
+                        margin-bottom: 12px;
+                    }
+                    span{
+                        font-size: 18px;
+                        line-height: 30px;
+                        font-weight: 600;
+                        color: #000;
+                    }
+                }
+
+            }
+        }
+
+        .box-img{
+            max-width: 800px;
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+ }
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .mobile-app-section{    
+        .mobile__box{
+          gap: 8px;
+            .box__content{
+                .icon__wrapper{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    column-gap: 8px;
+                    row-gap: 8px;
+                    margin: 40px 0;
+                    .icon__card{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        width: 100%;
+                        background-color: #f4f7ff;
+                        padding: 8px;              
+                        border-radius: 8px;
+                        img{
+                            width: 42px;
+                            height: 42px;
+                            margin-bottom: 8px;
+                        }
+                        span{
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+    
+                }
+    
+                h4{
+                    font-size: 32px;
+                    line-height: 40px;
+                    font-weight: 800;
+                    color: #464359;
+                    margin-bottom: 32px;
+                }
+    
+                .technologies__wrapper{
+                    .technologies__card{
+                        img{
+                            width: 42px;
+                            height: 42px;
+                            margin-bottom: 8px;
+                        }
+                        p{
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+    
+            .box-img{
+                background-image: url("../../assets/images/imgs/mobile-card-bg.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 8px;
+                max-width: 500px;
+                padding: 40px 0;
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    
+}

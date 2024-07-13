@@ -1,12 +1,22 @@
-import { hero_img, mobile_application } from '@/assets'
+'use client'
 import { IconsSchema, MobileBoxSchema } from '@/static/types'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MobileApp:React.FC<{ mobil_data:MobileBoxSchema }> = ( { mobil_data } ) => {
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,     
+    });
+  }, []);
 
-const iconItems = mobil_data.icons.map((icon: IconsSchema, inx:number) => (
+
+const iconItems:JSX.Element[] = mobil_data.icons.map((icon: IconsSchema, inx:number) => (
 
         <div className="icon__card" key={inx}>
 
@@ -16,7 +26,7 @@ const iconItems = mobil_data.icons.map((icon: IconsSchema, inx:number) => (
         </div>
 
 )) 
-const technologItems = mobil_data.technologies_wrapper.map((technology: IconsSchema, inx:number) => (
+const technologItems:JSX.Element[] = mobil_data.technologies_wrapper.map((technology: IconsSchema, inx:number) => (
 
           <div className="technologies__card" key={inx}>
 
@@ -35,7 +45,7 @@ const technologItems = mobil_data.technologies_wrapper.map((technology: IconsSch
 
                 <div className="mobile__box">
 
-                            <div className="box__content">
+                            <div data-aos={mobil_data.aos[0]} className="box__content">
 
                                      <p>{mobil_data.desc}</p>
 
@@ -55,9 +65,9 @@ const technologItems = mobil_data.technologies_wrapper.map((technology: IconsSch
 
                             </div>
 
-                            <div className="box-img">
+                            <div   className="box-img">
 
-                                        <Image alt='Logo' src={mobil_data.img} width={500} height={419} />
+                                        <Image data-aos={mobil_data.aos[1]} alt='Logo' src={mobil_data.img} width={500} height={419} />
 
                             </div>
 

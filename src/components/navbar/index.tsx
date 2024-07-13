@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 
 // images
 import { logo, mobile_application, consulting, design , erp, optimization,delever, goodzone, iman, sms } from '@/assets/index' 
@@ -7,10 +8,21 @@ import Image from 'next/image'
 
 // react-icons
 import { IoIosArrowDown } from "react-icons/io";
+import { FiMenu } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
+
+
 
 
 const Navbar:React.FC = () => {
+
+  const [open, setOpen] = useState<boolean>(false)
+
+  document.body.style.overflow  = open ? 'hidden' : 'auto'
+
   return (
+
+    <>
     <div className='navbar-section'>
 
         <div className="container">
@@ -21,14 +33,14 @@ const Navbar:React.FC = () => {
                     <Image alt='Logo' src={logo} width={96} height={32}/>
             </Link>
 
-            <ul className='nav__items'>
+            <ul className={`nav__items ${open ? 'navbar__open' : ''}`}>
                  <li  className='nav__item'>
                       <Link href='#direction'>Direction</Link>
                  </li>
-                 <li className='nav__item'>
+                 <li onClick={() => setOpen(false)} className='nav__item'>
                       <Link href='#command'>Command</Link>
                  </li>
-                 <li className='nav__item nav__item-service'>
+                 <li onClick={() => setOpen(false)} className='nav__item nav__item-service'>
                       <Link href='#mobile-application'>Services  <IoIosArrowDown/> </Link>
                       <div className="nav__service-wrapper">
                         <h2 className='nav__service-title'>Services</h2>
@@ -49,7 +61,7 @@ const Navbar:React.FC = () => {
                             <p>IT consulting</p>
                         </Link>
                         <Link href='#optimization' className="nav__service-box">
-                            <Image alt='Logo' src={optimization} width={24} height={24}/>
+                        <Image alt='Logo' src={optimization} width={24} height={24}/>
                             <p>Optimization IT consulting infrastructure</p>
                         </Link>
                       </div>
@@ -57,7 +69,7 @@ const Navbar:React.FC = () => {
                  <li className='nav__item'>
                       <Link href='#tools'>Tools</Link>
                  </li>
-                 <li className='nav__item'>
+                 <li onClick={() => setOpen(false)} className='nav__item'>
                       <Link href='#clients'>Clilents</Link>
                  </li>
                  <li className='nav__item nav__item-portfolio' >
@@ -86,16 +98,28 @@ const Navbar:React.FC = () => {
                  <li className='nav__item nav__item-language'>
                       <Link href='#language'>Language <IoIosArrowDown/> </Link>
                  </li>
-                 <li className='nav__item nav__item-contact'>
+                 <li onClick={() => setOpen(false)} className='nav__item nav__item-contact'>
                       <Link href='#contact'>Contact</Link>
                  </li>
             </ul>
+
+            <div onClick={() => setOpen(( p:boolean ) => !p )}  className="menu">
+              {
+                open ? <AiOutlineClose/> :     <FiMenu/>
+              }
+          
+            </div>
 
           </nav>
 
         </div>
 
     </div>
+    {
+      open && <div onClick={() => setOpen(false)} className="owerlay"></div>
+    }
+    </>
+
   )
 }
 

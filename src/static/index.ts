@@ -1,4 +1,4 @@
-    import { ServiceCardItemSchema, MobileBoxSchema, ToolsSchema } from './types'
+import { ServiceCardItemSchema, MobileBoxSchema, ToolsSchema, PortfolioBoxSchema, WorkShcema } from './types'
 
 // services data
 import { team_service, tel_service, erp_service, design_service, optimization_service, consulting_service } from  '@/assets'
@@ -74,7 +74,8 @@ export const mobil_data:MobileBoxSchema = {
         },
     ],
     img: mobile_app_img,
-    className: "mobile-app-banner"
+    className: "mobile-app-banner",
+    aos: ['fade-up', 'zoom-in-up']
 }
 
 // erp section data
@@ -114,7 +115,8 @@ export const erp_data:MobileBoxSchema = {
     technologies: false,
     url: "erp",
     technologies_wrapper: [],
-    img: erp_img
+    img: erp_img,
+    aos: ['fade-up', 'zoom-in-up']
 }
 
 // design section data
@@ -172,6 +174,7 @@ export const design_data:MobileBoxSchema = {
             img_icon: Illustrator,
         },
     ],
+    aos: ['fade-up', 'zoom-in-up']
     
 
 }
@@ -217,7 +220,8 @@ export const optimization_data:MobileBoxSchema = {
             title_icon: "CI / CD",
             img_icon: CI_CD
         },
-    ]
+    ],
+    aos: ['fade-up', 'zoom-in-up']
 
 }
 
@@ -259,6 +263,7 @@ export const consulting_data : MobileBoxSchema = {
     ],
     technologies: false,
     technologies_wrapper: [],
+    aos: ['fade-up', 'zoom-in-up']
 }
 
 
@@ -555,4 +560,183 @@ export const tools_data:ToolsSchema[] = [
         category: "UX/UI"
     },
 
+]
+
+// delever section data
+import {delever_img, website, admin_panel, cross_platform, design_portfolio, phone_portfolio, car , deliver} from '@/assets'
+
+export const delever_data:PortfolioBoxSchema = {
+    img:delever_img,
+    desc : "Delever - Delivery service automation targeted at both consumers and restaurants.",
+    icon: car,
+    logo: deliver,
+    icons: [
+        {
+            title_icon: "Website",
+            img_icon: website,
+        },
+        {
+            title_icon: "Admin panel",
+            img_icon: admin_panel,
+        },
+        {
+            title_icon: "Crossplatform",
+            img_icon: cross_platform,
+        },
+        {
+            title_icon: "Web design",
+            img_icon: design_portfolio,
+        },
+        {
+            title_icon: "Mobile design",
+            img_icon: phone_portfolio,
+        },
+    ],
+    title: "Delivery",
+    color: ["#FFDDD3", "#FF6A3B"],
+    width: 120,
+    classList: 'delever',
+    id: 'delever',
+    aos: ['fade-up', 'zoom-in-up']
+
+}
+
+
+// sms-uz section data
+import { sms_uz_img, sms_uz_logo, notification } from '@/assets' 
+
+export const sms_uz_data:PortfolioBoxSchema = {
+    classList: 'sms-uz',
+    color: ['#DAE3FA', "#1B5BF7"],
+    desc:"Smsuz.uz - It is a platform for bulk SMS messaging.",
+    title: "Notification",
+    width: 145,
+    icons: [
+        {
+            title_icon: "Website",
+            img_icon: website,
+        },
+        {
+            title_icon: "Admin panel",
+            img_icon: admin_panel,
+        },
+        {
+            title_icon: "Crossplatform",
+            img_icon: cross_platform,
+        },
+       
+    ],
+    logo: sms_uz_logo,
+    img: sms_uz_img,
+    icon: notification,
+    id: "sms",
+    aos: ['fade-up', 'zoom-in-up']
+
+}
+
+// goodzone section data
+import { goodzone_log, goodzone_img, commerce } from '@/assets' 
+
+export const goodzone_data:PortfolioBoxSchema = {
+    classList: 'goodzone',
+    color: ['#FDCCCC', '#F50000'],
+    desc: "Goodzone - Internet shop of household appliances in Uzbekistan.",
+    id: "goodzone",
+    title:"E-Commerce",
+    width: 155,
+    icons: [
+        {
+            title_icon: "Website",
+            img_icon: website,
+        },
+        {
+            title_icon: "Admin panel",
+            img_icon: admin_panel,
+        },
+        {
+            title_icon: "Crossplatform",
+            img_icon: cross_platform,
+        },
+        {
+            title_icon: "Web design",
+            img_icon: design_portfolio,
+        },
+        {
+            title_icon: "Mobile design",
+            img_icon: phone_portfolio,
+        },
+    ],
+     icon: commerce,
+     img: goodzone_img,
+     logo: goodzone_log,
+     aos: ['fade-up', 'zoom-in-up']
+
+}
+
+// iman section data
+import { bank, iman_img, iman_logo } from '@/assets'
+
+export const iman_data:PortfolioBoxSchema = {
+    classList: 'iman',
+    color: ['#CCF4EF', '#01CAB0'],
+    desc: "Iman - It is a mutual financing platform based on the principles of Islamic Finance. Buyers, sellers and investors meet here.",
+    title: "Finance",
+    width: 120,
+    id: 'iman',
+    icons: [
+        {
+            title_icon: "Mobile design",
+            img_icon: phone_portfolio,
+        },
+        {
+            title_icon: 'Admin panel',
+            img_icon: admin_panel
+        },
+        {
+            title_icon: 'Crossplatform',
+            img_icon: cross_platform
+        },
+    ],
+    icon: bank,
+    img: iman_img,
+    logo: iman_logo,
+    aos: ['fade-up', 'zoom-in-up']
+
+}
+
+
+// work with us section data
+import { work_img1, work_img2, work_img3, work_img4, work_img5 } from '@/assets'
+
+export const work_data:WorkShcema[] = [
+    {
+        id: 1,
+        desc: "Send us your project request or project idea",
+        title: "Сontact",
+        img: work_img1,
+    },
+    {
+        id: 2,
+        desc: "We will contact you to clarify your project requirements.",
+        title: "Analysis",
+        img: work_img2,
+    },
+    {
+        id: 3,
+        desc: "We will provide you with our free, non-binding application.",
+        title: "Offer",
+        img: work_img3,
+    },
+    {
+        id: 4,
+        desc: "We provide a team for your requirements.",
+        title: "Team",
+        img: work_img4,
+    },
+    {
+        id: 5,
+        desc: "You will get to know the team and we'll get started.",
+        title: "Start",
+        img: work_img1,
+    },
 ]

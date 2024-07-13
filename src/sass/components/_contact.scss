@@ -1,0 +1,96 @@
+.contact-section{
+    padding: 80px 0;
+    background-image: url('../../assets/images/imgs/bg.jfif');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    .contact__title{
+        max-width: 800px;
+        font-size: 64px;
+        line-height: 64px;
+        font-weight: 800;
+        color: #1b5bf7;
+        margin-bottom: 42px;
+    }
+    .contact__form{
+        padding: 40px 98px 80px;
+        border-radius: 10px;
+         box-shadow: 2px 10px 28px rgba(75, 0, 129, .12);
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        .inputs{
+            max-width: 425px;
+            h4{
+                font-size: 20px;
+                line-height: 30px;
+                color: #0f001a;
+                margin-bottom: 20px;
+            }
+
+        }
+        .connection{
+            max-width:425px;
+            .rows{
+               display: grid;
+               grid-template-columns: 30px 1fr;
+                text-decoration: none;
+                gap: 4px;
+                margin-bottom: 20px;
+                svg{
+                    font-size: 26px;
+                    color: #1b5bf7;
+                    width: 30px;
+                    height: 30px;
+                }
+                span{
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #0f001a;
+                }
+            }
+            .icona{
+                grid-template-columns: repeat(4, 40px);
+            }
+            .map{
+                width: 100%;
+                height: 230px !important;
+            }
+        }
+    }
+  
+}
+
+@media screen and (max-width: 900px) {
+    .contact-section{
+        padding: 50px 0;
+        .contact__title{
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 800;
+            margin-bottom:26px ;
+        }
+        .contact__form{
+            padding: 15px;
+            flex-direction: column;
+            gap: 20px;
+            .inputs{
+                max-width: 900px;
+                width: 100%;
+                input{
+                    width: 100%;
+                }
+            }
+            .connection{
+                max-width: 900px;
+                width: 100%;
+                text-align: start;
+                .map{
+                    display: none;
+                }
+            }
+        }
+    }
+}

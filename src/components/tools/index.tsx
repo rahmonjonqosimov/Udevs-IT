@@ -26,7 +26,6 @@ const Tools:React.FC = () => {
         setValue(e.target.value)
     }
 
-    console.log(value);
     
     
   return (

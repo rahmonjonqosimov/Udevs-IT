@@ -1,10 +1,21 @@
-import React from 'react'
+
+'use client'
+import React, { useEffect } from 'react'
 
 // image
 import { team_img } from '@/assets'
 import Image from 'next/image'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Team:React.FC = () => {
+useEffect(() => {
+                AOS.init({
+                  duration: 1000, 
+                  once: true,     
+                });
+}, []);
   return (
     <div className='team-section' id='command'>
         <div className="container">
@@ -13,7 +24,7 @@ const Team:React.FC = () => {
 
                 <div className="team__box">
 
-                        <div className="box__text">
+                        <div  data-aos="fade-up" className="box__text">
 
                                 <p>For each project, we form a team that includes a project manager, business analyst, UI / UX designer, DevOps, QA engineer, backend and front-end developers.</p>
 
@@ -23,7 +34,7 @@ const Team:React.FC = () => {
 
                         </div>
 
-                        <div className="team-img">
+                        <div  data-aos="zoom-in-up" className="team-img">
 
                                 <Image alt='Logo' src={team_img} width={500} height={419} quality={100} />
 
