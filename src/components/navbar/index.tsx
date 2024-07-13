@@ -18,14 +18,6 @@ const Navbar:React.FC = () => {
 
   const [open, setOpen] = useState<boolean>(false)
 
-  useEffect(() => {
-
-   document.body.style.overflow  = open ? 'hidden' : 'auto'
-   
-  }, [open])
-
-
-
   return (
 
     <>
