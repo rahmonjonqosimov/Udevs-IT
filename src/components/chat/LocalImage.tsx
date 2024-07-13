@@ -3,7 +3,6 @@ import { IoMdCloseCircle } from 'react-icons/io';
 
 
 const LocalImage:React.FC<any> = ({file, setFile}) => {
-  console.log(file);
 
   const handleRemoveImage = (index:number) => {
     setFile((prev:any) => [...prev].filter((_, inx) => inx !== index));

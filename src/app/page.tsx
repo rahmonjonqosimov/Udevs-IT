@@ -12,10 +12,10 @@ import Portfolio from '@/components/portfolio'
 import HowWeWork from '@/components/how-we-work'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
+import Chat from '@/components/chat'
 
 // data
 import { mobil_data, erp_data, design_data, optimization_data, consulting_data, delever_data, sms_uz_data, goodzone_data, iman_data } from '@/static'
-import Chat from '@/components/chat'
 
 
 
