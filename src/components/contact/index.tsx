@@ -28,7 +28,7 @@ const Contact:React.FC = () => {
         api.open("GET", url, true);
         api.send();
         event.currentTarget.reset();
-        
+
       };
     
 
@@ -50,7 +50,6 @@ const Contact:React.FC = () => {
                                   label="Name"
                                   name="name"
                                   autoComplete="email"
-                                  autoFocus
                                 />
                                   <TextField
                                   margin="normal"
@@ -60,7 +59,6 @@ const Contact:React.FC = () => {
                                   label="Email Address"
                                   name="email"
                                   autoComplete="email"
-                                  autoFocus
                                 />
                                 <TextField
                                   margin="normal"
